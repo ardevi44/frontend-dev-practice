@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yard Sale | Log in</title>
+  <link rel="icon" type="image/svg+xml" href="./yard-sale-favicon.svg">
+  <style>
+    html {
+      font-size: 62.5%; /* 1rem = 10px */
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+      margin: 0;
+      padding: 0;
+    }
+
+    .login {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      width: 90%;
+      max-width: 34rem;
+      margin: 0 auto;
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+    <main class="login">
+      <div class="form-container">
+        <img src="./logo-yard-sale.svg" alt="Yard Sale Logo">
+        <form class="form login__form" action="">
+          <div class="field form__field">
+            <label class="form__label" for="">Email address</label>
+            <input class="form__input" type="email" value="camilayokoo@gmail.com"/>
+          </div>
+          <div class="field form__field">
+            <label class="form__label" for="">Password</label>
+            <input class="form__input" type="password" value="***********"/>
+          </div>
+          <input class="button button--primary" type="submit" value="Log in">
+          <a class="info-text" href="">Forgot my password</a>
+        </form>
+      </div>
+      
+      <a class="button button--secondary" href="">Sign up</a>
+    </main>
+</body>
+</html>
