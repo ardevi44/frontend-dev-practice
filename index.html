@@ -12,182 +12,264 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --label: 1.4rem;
-        --quicksand: "Quicksand", sans-serif;
-        --text-input-field: #f7f7f7;
-        --info-text: #797979;
-        --hospital-green: #acd9b2;
-        --white: #fff;
-        --active: #45d158;
-      }
-
-      html {
-        font-size: 62.5%; /* 1rem = 10px */
-        box-sizing: border-box;
-      }
-
-      *,
-      *:before,
-      *:after {
-        box-sizing: inherit;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        font-family: var(--quicksand);
-      }
-
-      a {
-        text-decoration: none;
-      }
-
-      input[type="email"] {
-        color: var(--info-text);
-      }
-
-      .login {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100vh;
-        min-height: 59.2rem;
-        max-height: 81.2rem;
-        width: 90%;
-        max-width: 34rem;
-        margin: 0 auto;
-      }
-
-      .form-container {
-        display: flex;
-        flex-direction: column;
-        /* align-items: center; */
-        padding-top: 10rem;
-      }
-
-      .login__logo {
-        width: 20.5rem;
-        align-self: center;
-      }
-
-      .form {
-        margin-top: 5.5rem;
-      }
-
-      .field {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .form__field {
-        display: flex;
-        flex-direction: column;
-        margin-top: 2rem;
-        text-align: left;
-        gap: 0.4rem;
-      }
-
-      .form .form__field:first-child {
-        margin-top: 0;
-      }
-
-      .form__label {
-        font-size: var(--label);
-        font-weight: 700;
-      }
-
-      .form__input {
-        border: none;
-        outline: none;
-        background-color: var(--text-input-field);
-        padding: 1.2rem 0.8rem;
-        border-radius: 1rem;
-        font-size: 1.6rem;
-      }
-
-      .button {
-        display: block;
-        width: 100%;
-        padding: 1.5rem;
-        border: none;
-        border-radius: 1rem;
-        outline: none;
-        font-family: var(--quicksand);
-        font-size: 1.8rem;
-        text-align: center;
-      }
-
-      .button--primary {
-        margin-top: 3.5rem;
-        background-color: var(--hospital-green);
-        color: var(--white);
-      }
-
-      .button-secondary {
-        border: 0.1rem solid var(--hospital-green);
-        background-color: var(--white);
-        color: var(--hospital-green);
-        font-weight: 700;
-      }
-
-      .button-secondary:hover {
-        background-color: var(--active);
-        cursor: pointer;
-        color: var(--white);
-      }
-
-      .login__sign-up-button {
-        margin-bottom: 2.5rem;
-      }
-
-      .extra-info-text {
-        margin-top: 3rem;
-        font-size: 1.4rem;
-        font-weight: 500;
-        color: var(--info-text);
-      }
-
-      .info-link--primary {
-        color: var(--hospital-green);
-      }
-
-      .forgot-password {
-        display: block;
-        margin-top: 3rem;
-        text-align: center;
-      }
-    </style>
   </head>
+  <style>
+    :root {
+      --white: #fff;
+      --black: #000;
+      --very-light-pink: #c7c7c7;
+      --info-text: #797979;
+      --text-input-field: #f7f7f7;
+      --hospital-green: #acd9b2;
+
+      /*font sizes*/
+      --title: 1.8rem;
+      --label: 1.4rem;
+
+      /* font families */
+      --quicksand: "Quicksand", sans-serif;
+
+      /* colors */
+      --active: #45d158;
+    }
+
+    html {
+      font-size: 62.5%;
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--quicksand);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .login {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
+      min-height: 59.2rem;
+      max-height: 74.8rem;
+      width: 90%;
+      max-width: 34rem;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .login {
+        justify-content: flex-start;
+        gap: 4%;
+      }
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      padding-top: 10rem;
+    }
+
+    .form {
+      margin-top: 5.5rem;
+    }
+
+    /* .main-section {
+      text-align: center;
+      width: 90%;
+      max-width: 33.8rem;
+    } */
+
+    /* .section-logo {
+      width: 15rem;
+      margin-bottom: 5.5rem;
+    } */
+
+    /* .title {
+      font-size: var(--title);
+    } */
+
+    .info-text {
+      font-size: var(--title);
+      font-weight: 400;
+      color: var(--info-text);
+      margin-top: 0.6rem;
+      margin-bottom: 4rem;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form__field {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2rem;
+      text-align: left;
+      gap: 0.4rem;
+    }
+
+    .form .form__field:first-child {
+      margin-top: 0;
+    }
+
+    .form__label {
+      font-size: var(--label);
+      font-weight: 700;
+    }
+
+    .form__input {
+      border: none;
+      outline: none;
+      background-color: var(--text-input-field);
+      padding: 1.2rem 0.8rem;
+      border-radius: 1rem;
+      font-size: 1.6rem;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      padding: 1.5rem;
+      border: none;
+      border-radius: 1rem;
+      outline: none;
+      font-family: var(--quicksand);
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    .button--primary {
+      margin-top: 3.5rem;
+      background-color: var(--hospital-green);
+      color: var(--white);
+    }
+
+    .button--primary:hover {
+      background-color: var(--active);
+      cursor: pointer;
+    }
+
+    .form .form__field:first-child {
+      margin-top: 0;
+    }
+
+    /* login styles */
+    /* .login {
+      height: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .login {
+        height: auto;
+      }
+    } */
+
+    .login__logo {
+      width: 20.5rem;
+      align-self: center;
+    }
+
+    @media (min-width: 768px) {
+      .login__logo {
+        display: none;
+      }
+    }
+
+    input[type="email"] {
+      color: var(--info-text);
+    }
+
+    .extra-info-text {
+      margin-top: 3rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--info-text);
+    }
+
+    .info-link--primary {
+      color: var(--hospital-green);
+    }
+
+    .info-link--primary:hover {
+      color: var(--active);
+    }
+
+    .forgot-password {
+      display: block;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .button-secondary {
+      border: 0.1rem solid var(--hospital-green);
+      background-color: var(--white);
+      color: var(--hospital-green);
+      font-weight: 700;
+    }
+
+    .button-secondary:hover {
+      background-color: var(--active);
+      cursor: pointer;
+      color: var(--white);
+    }
+
+    .login__sign-up-button {
+      margin-bottom: 2.5rem;
+    }
+
+    /* .login__sign-up-button {
+      margin-top: 15.4rem;
+      margin-bottom: 2rem;
+    } */
+
+    /* @media (min-width: 668px) {
+      .login__sign-up-button {
+        margin-top: 3.5rem;
+        margin-bottom: 0;
+      }
+    } */
+  </style>
   <body>
     <main class="login">
       <div class="form-container">
         <img
           class="login__logo"
           src="./logo-yard-sale.svg"
-          alt="Yard Sale Logo"
+          alt="Yard Sale logo"
         />
-        <form class="form login__form" action="">
+        <form class="form">
           <div class="field form__field">
-            <label class="form__label" for="">Email address</label>
+            <label class="form__label" for="email-address">
+              Email address
+            </label>
             <input
+              id="email-address"
               class="form__input"
               type="email"
-              value="camilayokoo@gmail.com"
+              value="camilayokoo@gamil.com"
             />
           </div>
-          <div class="field form__field">
-            <label class="form__label" for="">Password</label>
-            <input class="form__input" type="password" value="***********" />
+          <div class="form__field">
+            <label class="form__label" for="password"> Password </label>
+            <input id="password" class="form__input" type="password" />
           </div>
-          <input class="button button--primary" type="submit" value="Log in" />
+          <input type="submit" class="button button--primary" value="Log in" />
           <a class="extra-info-text info-link--primary forgot-password" href="#"
             >Forgot my password</a
           >
         </form>
       </div>
-
       <a class="button button-secondary login__sign-up-button" href="#"
         >Sign up</a
       >
